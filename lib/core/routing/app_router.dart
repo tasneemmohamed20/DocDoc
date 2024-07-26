@@ -5,9 +5,9 @@ class AppRouter {
   Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.onBoardingScreen:
-        return MaterialPageRoute(builder: (_) => Placeholder());
+        return MaterialPageRoute(builder: (_) => const Placeholder());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => Placeholder());
+        return MaterialPageRoute(builder: (_) => const Placeholder());
 
       default:
         return MaterialPageRoute(
