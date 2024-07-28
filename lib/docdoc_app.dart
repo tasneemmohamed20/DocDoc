@@ -17,6 +17,7 @@ class DocApp extends StatelessWidget {
         title: 'Doc App',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: Colors.white,
         ),
         onGenerateRoute: appRouter.generateRoute,
       ),

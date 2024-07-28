@@ -1,3 +1,4 @@
+import 'package:docdoc/Features/login/ui/login_screen.dart';
 import 'package:docdoc/Features/onBoarding/ui/onbboarding_screen.dart';
 import 'package:docdoc/core/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,7 @@ class AppRouter {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(builder: (_) => const OnbboardingScreen());
       case Routes.loginScreen:
-        return MaterialPageRoute(builder: (_) => const Placeholder());
+        return MaterialPageRoute(builder: (_) => LoginScreen());
 
       default:
         return MaterialPageRoute(
