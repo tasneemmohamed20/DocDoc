@@ -3,6 +3,8 @@ import 'package:docdoc/Features/login/logic/cubit/login_cubit.dart';
 import 'package:docdoc/core/networking/dio_factory.dart';
 import 'package:get_it/get_it.dart';
 import '../../Features/login/data/repositories/login_repo.dart';
+import '../../Features/signup/data/repositories/signup_repo.dart';
+import '../../Features/signup/logic/cubit/signup_cubit.dart';
 import '../networking/api_service.dart';
 
 
@@ -14,4 +16,8 @@ Future <void> setupGetIt() async {
   // Registering the LoginRepo
   getit.registerFactory<LoginRepo>(() => LoginRepo(getit<ApiService>()));
   getit.registerFactory<LoginCubit>(() => LoginCubit(getit<LoginRepo>()));
+
+  // Registering the SignupRepo
+  getit.registerFactory<SignupRepo>(() => SignupRepo(getit<ApiService>()));
+  getit.registerFactory<SignupCubit>(() => SignupCubit(getit<SignupRepo>()));
 }

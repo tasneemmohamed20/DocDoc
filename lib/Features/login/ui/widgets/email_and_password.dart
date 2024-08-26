@@ -52,8 +52,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           AppTextFormField(
             hintText: 'Email',
             validator: (value) {
-              if (value == null ||
-                  value.isEmpty ||
+              if (value.isEmpty ||
                   !AppRegex.isEmailValid(value)) {
                 return 'Please enter a valid email';
               }
@@ -64,7 +63,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           AppTextFormField(
             controller: context.read<LoginCubit>().passwordController,
             validator: (value) {
-              if (value == null || value.isEmpty) {
+              if (value.isEmpty) {
                 return 'Please enter a valid password';
               }
             },

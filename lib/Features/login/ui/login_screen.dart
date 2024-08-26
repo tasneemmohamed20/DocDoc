@@ -1,19 +1,17 @@
-import 'package:docdoc/Features/login/data/models/login_request_body.dart';
 import 'package:docdoc/Features/login/logic/cubit/login_cubit.dart';
-import 'package:docdoc/Features/login/ui/widgets/already_have_account.dart';
+import 'package:docdoc/Features/login/ui/widgets/dont_have_account.dart';
 import 'package:docdoc/Features/login/ui/widgets/email_and_password.dart';
 import 'package:docdoc/Features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:docdoc/Features/login/ui/widgets/terms_conditions.dart';
 import 'package:docdoc/core/helpers/spacing.dart';
-import 'package:docdoc/core/theming/app_color.dart';
 import 'package:docdoc/core/widgets/app_text_button.dart';
-import 'package:docdoc/core/widgets/app_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/theming/app_styles.dart';
 
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
 
@@ -62,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(16),
                     const TermsAndConditionsText(),
                     verticalSpace(60),
-                    const AlreadyHaveAccount(),
+                    const DontHaveAccount(),
                     const LoginBlocListener()
                   ],
                 )
