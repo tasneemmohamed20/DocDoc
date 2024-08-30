@@ -3,10 +3,10 @@ part 'signup_response_model.g.dart';
 
 @JsonSerializable()
 class SignupResponse {
-  final String message;
-  @JsonKey(name: 'user_data')
+  String message;
+  @JsonKey(name: 'data')
   UserData userData;
-  final bool status;
+  bool status;
   int code;
 
   SignupResponse({
@@ -27,8 +27,8 @@ class UserData {
   final String? userName;
 
   UserData({
-     this.token,
-     this.userName,
+    this.token,
+    this.userName,
   });
 
   factory UserData.fromJson(Map<String, dynamic> json) =>

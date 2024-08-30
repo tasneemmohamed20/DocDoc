@@ -10,14 +10,14 @@ SignupResponse _$SignupResponseFromJson(Map<String, dynamic> json) =>
     SignupResponse(
       status: json['status'] as bool,
       message: json['message'] as String,
-      userData: UserData.fromJson(json['user_data'] as Map<String, dynamic>),
+      userData: UserData.fromJson(json['data'] as Map<String, dynamic>),
       code: (json['code'] as num).toInt(),
     );
 
 Map<String, dynamic> _$SignupResponseToJson(SignupResponse instance) =>
     <String, dynamic>{
       'message': instance.message,
-      'user_data': instance.userData,
+      'data': instance.userData,
       'status': instance.status,
       'code': instance.code,
     };
